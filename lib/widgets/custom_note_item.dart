@@ -6,6 +6,15 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(
+        top: 10,
+        bottom: 10,
+        left: 10,
+        right: 5,
+      ),
+      margin: EdgeInsets.symmetric(
+        vertical: 15,
+      ),
       decoration: BoxDecoration(
         color: Colors.amber,
         borderRadius: BorderRadius.circular(16),
