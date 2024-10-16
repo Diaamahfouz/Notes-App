@@ -12,7 +12,7 @@ class NotesListView extends StatelessWidget {
         horizontal: 5,
       ),
       itemCount: 10,
-      itemBuilder: (BuildContext context, int index) {
+      itemBuilder: (_, index) {
         return NoteItem();
       },
     );

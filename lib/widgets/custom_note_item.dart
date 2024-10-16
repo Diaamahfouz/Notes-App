@@ -13,7 +13,7 @@ class NoteItem extends StatelessWidget {
         right: 5,
       ),
       margin: EdgeInsets.symmetric(
-        vertical: 15,
+        vertical: 10,
       ),
       decoration: BoxDecoration(
         color: Colors.amber,
