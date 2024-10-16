@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants/constants.dart';
+import 'package:notes_app/widgets/custom_button.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
@@ -6,10 +8,24 @@ class AddNoteBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         const SizedBox(
-          height: 40,
+          height: 10,
+        ),
+        const Align(
+          alignment: Alignment.center,
+          child: Text(
+            'Add Note',
+            style: TextStyle(
+              color: KprimaryColor,
+              fontSize: 26,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 15,
         ),
         CustomTextField(
           text: 'Title',
@@ -18,6 +34,7 @@ class AddNoteBottomSheet extends StatelessWidget {
           text: 'Content',
           maxLines: 5,
         ),
+        CustomButton(),
       ],
     );
   }
