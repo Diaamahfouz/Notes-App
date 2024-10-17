@@ -34,7 +34,8 @@ class AddNoteBottomSheet extends StatelessWidget {
           text: 'Content',
           maxLines: 5,
         ),
-        CustomButton(),
+       
+       const CustomButton(text: 'Add',),
       ],
     );
   }

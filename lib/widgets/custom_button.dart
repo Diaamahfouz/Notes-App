@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants/constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  const CustomButton({required this.text, super.key});
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,9 @@ class CustomButton extends StatelessWidget {
         horizontal: 20,
       ),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Navigator.pop(context);
+        },
         child: Container(
           height: 55,
           width: MediaQuery.of(context).size.width,
@@ -20,9 +23,9 @@ class CustomButton extends StatelessWidget {
             color: KprimaryColor,
             borderRadius: BorderRadius.circular(10),
           ),
-          child: const Center(
+          child: Center(
             child: Text(
-              'Add ',
+              text,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 22,
