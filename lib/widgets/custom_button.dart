@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants/constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({required this.text, super.key});
+  const CustomButton({required this.text, super.key, this.onTap});
   final String text;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +14,7 @@ class CustomButton extends StatelessWidget {
         horizontal: 20,
       ),
       child: GestureDetector(
-        onTap: () {
-          Navigator.pop(context);
-        },
+       onTap:onTap,
         child: Container(
           height: 55,
           width: MediaQuery.of(context).size.width,
