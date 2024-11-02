@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -16,7 +18,7 @@ class AddNoteBottomSheet extends StatelessWidget {
           Navigator.pop(context);
         }
         if (state is AddNoteFailure) {
-          print('Feiled ${state.errorMessage}');
+          log('Feiled ${state.errorMessage}');
         }
       },
       builder: (context, state) {
