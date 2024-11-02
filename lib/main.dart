@@ -25,7 +25,7 @@ class NotesApp extends StatelessWidget {
           create: (context) => AddNoteCubit(),
         ),
       ],
-     `` child: MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: NotesView(),
         theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
