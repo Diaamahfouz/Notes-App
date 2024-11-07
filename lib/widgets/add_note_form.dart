@@ -25,7 +25,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
     return Form(
       key: formKey,
       autovalidateMode: autovalidateMode,
-      child: ListView(
+      child: Column(
         children: [
           const SizedBox(
             height: 10,
